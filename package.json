@@ -1,13 +1,5 @@
 {
-  "name": "OpenTagManager",
-  "private": true,
-  "scripts": {
-    "build": "turbo run build",
-    "dev": "turbo run dev",
-    "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "check-types": "turbo run check-types"
-  },
+  "name": "opentagmanager",
   "devDependencies": {
     "prettier": "^3.6.2",
     "turbo": "^2.5.5",
@@ -17,8 +9,21 @@
     "node": ">=18"
   },
   "packageManager": "bun@1.2.19",
+  "private": true,
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "check-types": "turbo run check-types"
+  },
+  "license" : "MIT",
   "workspaces": [
     "apps/*",
     "packages/*"
-  ]
+  ],
+  "dependencies": {
+    "superjson": "^2.2.2",
+    "zod": "^4.0.10"
+  }
 }

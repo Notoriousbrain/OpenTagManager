@@ -14,8 +14,9 @@
     "forceConsistentCasingInFileNames": true,
     "skipLibCheck": true,
     "noEmit": true,
-    "strict": true
-  },
+    "strict": true,
+    "jsx": "preserve"
+    },
   "exclude": ["node_modules"],
   "include": ["packages", "apps"]
 }

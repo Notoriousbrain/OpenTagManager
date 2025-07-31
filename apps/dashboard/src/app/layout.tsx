@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { Providers } from "./_provider";
+import TrpcLayout from "./trpc-layout";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Open Tag Manager",
-  description: "Open Source Alternative Of Google Tag Manager",
+  description: "Open Source Alternative of Google Tag Manager",
 };
 
 export default function RootLayout({
@@ -28,7 +28,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Providers>{children}</Providers>
+        <TrpcLayout>{children}</TrpcLayout>
       </body>
     </html>
   );

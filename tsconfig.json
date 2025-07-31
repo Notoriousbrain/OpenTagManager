@@ -5,9 +5,6 @@
     "lib": ["DOM", "ESNext"],
     "moduleResolution": "bundler",
     "baseUrl": ".",
-    "paths": {
-      "@otm/trpc/*": ["packages/trpc/src/*"]
-    },
     "allowJs": true,
     "resolveJsonModule": true,
     "esModuleInterop": true,
@@ -15,7 +12,11 @@
     "skipLibCheck": true,
     "noEmit": true,
     "strict": true,
-    "jsx": "preserve"
+    "jsx": "preserve",
+    "composite": true,
+    "paths": {
+      "api": ["./packages/api/src"]
+    }
     },
   "exclude": ["node_modules"],
   "include": ["packages", "apps"]

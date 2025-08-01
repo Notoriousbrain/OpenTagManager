@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/dashboard/:match*",
+      "destination": "/dashboard/:match*"
+    }
+  ]
+}

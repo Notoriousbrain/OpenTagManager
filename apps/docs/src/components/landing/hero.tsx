@@ -1,3 +1,4 @@
+import Galaxy from "../ui/galaxy";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Github } from "lucide-react";
@@ -6,37 +7,25 @@ import Link from "next/link";
 export default function HeroSection() {
   return (
     <div className="min-h-screen bg-[#0F0F0F] text-white relative overflow-hidden">
-      <div className="absolute inset-0 opacity-[0.02]">
-        <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <pattern
-              id="grid"
-              width="40"
-              height="40"
-              patternUnits="userSpaceOnUse"
-            >
-              <path
-                d="M 40 0 L 0 0 0 40"
-                fill="none"
-                stroke="white"
-                strokeWidth="70"
-              />
-            </pattern>
-          </defs>
-          <rect width="100%" height="100%" fill="url(#grid)" />
-        </svg>
+      <div className="h-screen w-screen absolute">
+        <Galaxy
+          mouseRepulsion={false}
+          mouseInteraction={true}
+          density={1.5}
+          glowIntensity={0.15}
+          hueShift={240}
+        />
       </div>
-
       <header className="relative z-10 flex items-center justify-between p-6 md:p-8">
         <div className="text-xl font-semibold">OpenTagManager</div>
         <div className="flex items-center gap-4">
-          <Link
-            href="#"
-            className=" hover:text-gray-300 transition-colors"
-          >
+          <Link href="#" className=" hover:text-gray-300 transition-colors">
             Roadmap
           </Link>
-          <Link href="https://github.com/Notoriousbrain/OpenTagManager" className="hover:text-gray-300 transition-colors">
+          <Link
+            href="https://github.com/Notoriousbrain/OpenTagManager"
+            className="hover:text-gray-300 transition-colors"
+          >
             <Github className="h-5 w-5" />
           </Link>
         </div>
@@ -44,8 +33,8 @@ export default function HeroSection() {
 
       <main className="relative z-10 flex flex-col items-center justify-center min-h-[calc(100vh-120px)] px-6 text-center">
         <div className="max-w-2xl mx-auto space-y-8">
-          <div className="space-y-4">
-            <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
+          <div className="space-y-8">
+            <h1 className="text-4xl md:text-6xl font-bold tracking-wide">
               Open Source
               <br />
               Tag Management
